@@ -1,0 +1,43 @@
+<h2>Todos Page</h2>
+
+{{#if todos.length}}
+
+<form action="/sortByDate1" method="GET">
+
+    <p><button type="submit" class="btn">Sort by date вверх</button></p>
+</form>
+
+<form action="/sortByDate2" method="GET">
+    <p> <button type="submit" class="btn">Sort by date вниз</button></p>
+</form>
+
+<form action="/sortByCost1" method="GET">
+    <p><button type="submit" class="btn">Sort by cost вверх</button></p>
+</form>
+
+<form action="/sortByCost2" method="GET">
+    <p><button type="submit" class="btn">Sort by cost вниз</button></p>
+</form>
+
+<ul>
+    {{#each todos}}
+    <li class='todo'>
+        <form action="/discription" method="get">
+            <label>
+                <span>{{title}}</span>
+                <span>{{cost}}</span>
+                <span>{{pictureUrl}}</span>
+                <span>{{date}}</span>
+                <input type="hidden" value="{{_id}}" name="id">
+            </label>
+        </form>
+        <form action="/discription" method="GET">
+            <input type="hidden" value="{{_id}}" name="id">
+            <button  type="submit" class="btn">Discription</button>
+        </form>
+    </li>
+    {{/each}}
+</ul>
+{{else}}
+<p>No todos</p>
+{{/if}}

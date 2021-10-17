@@ -1,0 +1,32 @@
+<form action="/create" method="POST">
+  <h2>Create todo</h2>
+
+  <div class="field">
+    <input type="text" name="title">
+    <label>Todo title</label>
+  </div>
+    
+  <div class="field">
+    <input type="number" name="cost">
+    <label>cost</label>
+  </div>
+    
+  <div class="field">
+    <input type="file" name="picture">
+    <label>Picture link</label>
+  </div>
+
+  <div class="field">
+    <input type="text" name="discription">
+    <label>Discription</label>
+  </div>
+    
+  <div class="field">
+      <p>
+        <input type="url" multiple="multiple" name="files">
+        <label>pictures</label>
+      </p>
+  </div>
+
+  <button type="submit" class="btn">Create</button>
+</form>
